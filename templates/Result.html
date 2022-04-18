@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vision Search</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+               body {
+                   height : 100%;
+                   width : 100%;
+
+                   background-position: center;
+                   background-repeat: no-repeat;
+                   background-size: cover;
+    }
+    table,th,td {
+       border : 2px solid black;
+        padding-left: 3px;
+        padding-right: 3px;
+
+}
+    .container{
+        padding-left: 3px;
+        padding-right: 3px;
+        height: 100%;
+        width : 100%;
+    }
+
+#searchbar{
+     height: 35px;
+     width: 500px;
+}
+.searchbar
+{
+    position: absolute;
+     top: 320px;
+     left: 950px;
+}
+.Search input
+{
+   height: 35px;
+   width: 80px;
+
+}
+button {
+    font-size: 1.1em;
+    background-color: #EBF5FF;
+    color: #4312AE;
+    border: 2px solid black;
+    box-shadow: 4px 4px 4px #999999;
+  }
+  button:hover, button:focus, button:active {
+    /* swap colors */
+    color: #EBF5FF;
+    background-color: #4312AE;
+    cursor: pointer; /* displays a hand */
+  }
+	body {
+        background-color: lightblue;
+    }
+	h1 {
+        font-size: 40px;
+    }
+  p {
+      font-size: 14px;
+  }
+  p1 {
+  margin: 70px;
+  border: 1px solid #4CAF50;
+}
+	</style>
+</head>
+    <body>
+    <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for key, value in result.items() %}
+       <tr>
+           <td> {{ key }} </td>
+           <td> {{ value }} </td>
+       </tr>
+      {% endfor %}
+      </tbody>
+      </table>
+    </div>
+    </body>
+</html>
